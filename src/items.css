@@ -1,0 +1,21 @@
+.undone {
+    background-color: rgb(0, 255, 21);
+    width: 300px;
+    min-height: 80px;
+    text-align: center;
+    margin: 20px auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.done {
+    background-color: rgb(228, 131, 131);
+    width: 300px;
+    min-height: 80px;
+    text-align: center;
+    margin: 20px auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}

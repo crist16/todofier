@@ -1,0 +1,9 @@
+.app {
+   background-color: rgb(171, 173, 141);
+   width: 70%;
+   min-height: 500px;
+   border: 2px solid black;
+   border-radius: 5px;
+   margin: 5px auto;
+}
+

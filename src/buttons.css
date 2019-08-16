@@ -1,0 +1,9 @@
+button {
+    margin: 5px 8px;
+    border-radius: 3px;
+    
+}
+
+button:hover {
+    background-color: salmon;
+}
