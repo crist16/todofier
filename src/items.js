@@ -8,45 +8,38 @@ export default class Items extends Component {
         super(props)
         this.state = {
             done: false
-
-
         }
         this.changeCss = this.changeCss.bind(this);
-        this.borrar_two = this.borrar_two.bind(this);
-
+        this.taskDone = this.taskDone.bind(this);
     }
 
-    changeCss(items, llave) {
+    changeCss() {
 
-        items.forEach(element => {
-            if (element.key === llave) {
-                console.log("entro");
-                this.setState({
-
-                    done: !this.state.done
-                })
-            }
-        });
+       var clases  = ["undone"];
+       if (this.state.done) {
+        clases = ["done"];
+        
+      }
+      return clases.join("");
+       
     }
 
-    borrar_two() {
+    taskDone() {
 
-        this.props.borrar()
-
+        this.setState({           
+            done : !this.state.done
+        })
     }
+    
 
-
-
-
+    
     render() {
 
         return (
-            <div className={this.state.done ? "done" : "undone"}>
-                <h3>{this.props.text}</h3>
-                <button onClick={() => this.changeCss(this.props.allItems, this.props.llave)}>Done</button><button onClick={this.props.borrar}>Delete</button>
+            <div className= {this.changeCss()}>
+                <h3>{this.props.description}</h3>
+                <button onClick={this.taskDone}>Done</button><button onClick={this.props.removeTodo}>Delete</button>
             </div>
-
-
         )
     }
 }

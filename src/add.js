@@ -29,9 +29,7 @@ export default class Add extends Component {
                 <form onSubmit={this.addingItems}>
                     <input ref={(a) => this._input = a} type="text" /><button>Add</button>
                 </form>
-
             </div>
-
         )
     }
 }
